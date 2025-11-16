@@ -29,9 +29,8 @@ cislo = randint(1, 100)
 print('Добро пожаловать в игру угадайку!')
 usercislo = int(input('Введите число от 1 до 100: '))
 count = 0
-if is_valid(usercislo):
-    check_num(usercislo)
-else:
+
+while not is_valid(usercislo) :
     usercislo = int(input('Введите правильное число от 1 до 100: '))
-    if is_valid(usercislo):
-        check_num(usercislo)
+
+check_num(usercislo)   
