@@ -15,7 +15,7 @@ def is_valid(num):
   
 
 cislo = randint(1, 100)
-print('Добро пожаловать в угадайку!')
+print('Добро пожаловать в игру угадайку!')
 usercislo = int(input('Введите число от 1 до 100: '))
 
 count = 1
