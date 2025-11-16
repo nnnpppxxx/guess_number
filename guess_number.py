@@ -4,11 +4,8 @@ def is_valid(num):
     if num > 100:
         print('Число больше ста.')
         return False
-    elif num < 0:
-        print('Число меньше нуля.')
-        return False
-    elif num == 0:
-        print('Число равно ноль.')
+    elif num < 1:
+        print('Число меньше одного.')
         return False
     else:
         return True
