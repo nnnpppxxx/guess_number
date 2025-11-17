@@ -1,5 +1,5 @@
-from random import *
-from time import *
+from random import randint
+from time import sleep
 
 def start():
     global usercislo
