@@ -40,6 +40,7 @@ def check_num(usercislo, cislo_program, count_for_game, count_win): #сама ф
             return
         print('-----------------------------------------')
         usercislo = int(input('Введите новое число от 1 до 100: '))
+        
         while not is_valid(usercislo) : #пока пользователь не введет корректное число - запрашиваем опять число
             usercislo = int(input('Введите правильное число от 1 до 100: '))
         count_win += 1
