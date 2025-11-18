@@ -1,0 +1,9 @@
+[project]
+name = "Guess The Number"
+version = "1.0.0"         
+description = "pygame"
+
+[tool.semantic_release]
+
+version_toml = ["pyproject.toml:project.version"]
+commit_parser = "conventional"
