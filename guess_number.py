@@ -24,26 +24,75 @@ def is_valid(usercislo):
         return True
   
 
-def check_num(usercislo):
-    global count
-    while usercislo != cislo:
-        if usercislo > cislo:
-            print('Твое число больше чем загаданное')
-        else:
-            print('Твое число меньше чем загаданное')
-        usercislo = int(input('Введите число от 1 до 100: '))
-        count += 1
-        if usercislo == cislo:
-            print('Угадал')
-            print(f'Количество попыток: {count}')
+def check_num(usercislo, cislo_program, count_for_game, count_win): #сама функция через которую пользователь угадывает число
+    while int(usercislo) != cislo_program:
+        count_for_game -= 1
+        if int(usercislo) > cislo_program:
+            print('-----------------------------------------')
+            print(f'Твое число больше чем мое, осталось {count_for_game} попыток.')
+        elif int(usercislo) < cislo_program:
+            print('-----------------------------------------')
+            print(f'Твое число меньше чем мое, осталось {count_for_game} попыток.')
+        if count_for_game == 0:
+            print('-----------------------------------------')
+            print('Увы. Ты проиграл, не расстраивайся, в следующий раз повезет!')
+            print('-----------------------------------------')
+            return
+        print('-----------------------------------------')
+        usercislo = input('Введите новое число от 1 до 100: ')
+
+        while not is_valid(usercislo) : #пока пользователь не введет корректное число - запрашиваем опять число
+            usercislo = input('Введите правильное число от 1 до 100: ')
+        count_win += 1
+    
+    sleep(1)
+    print('-----------------------------------------')
+    print('Ты угадал, поздравляю!')
+    print(f'Ты угадал с {count_win} попыток.')
+    print('-----------------------------------------')
+    return
+
+        
+
+def new_game_with_100():
+    cislo_program = randint(1,100)
+    usercislo = input('Отгадай мое новое загаданное число от 1 до 100: ')
+    count_for_game = 10
+    count_win = 1
+    usercislo = start(cislo_program, usercislo)
+    check_num(usercislo, cislo_program, count_for_game, count_win)
 
 
-cislo = randint(1, 100)
-print('Добро пожаловать в игру угадайку!')
-usercislo = int(input('Введите число от 1 до 100: '))
-count = 0
 
-while not is_valid(usercislo) :
-    usercislo = int(input('Введите правильное число от 1 до 100: '))
 
-check_num(usercislo)   
+
+
+
+
+
+
+
+# -----------------------MAIN------------------------------------
+print('-----------------------------------------')
+print('Добро пожаловать в игру Guess The Number!')
+print('-----------------------------------------')
+sleep(2)
+print('''Как играть:
+1. Я загадал число от 1 до 100, твоя задача угадать за 10 попыток.
+2. В конце ты сможешь начать новую игру! Стань лучше остальных!
+3. Удачи! =)''')
+print('-----------------------------------------')
+sleep(4)
+
+
+while True:
+    new_game_with_100()  
+    print('Начинаем новую игру?')  
+    new = input('Да или нет?: ')
+    print('-----------------------------------------')
+    if new.lower() != 'да':
+        print('Окей, пока!')
+        print('Приходи еще.')
+        break 
+
+
