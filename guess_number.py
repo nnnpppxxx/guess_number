@@ -1,36 +1,36 @@
 from random import randint
 from time import sleep
 
-def start():
-    global usercislo
-    if usercislo == cislo: #вдруг с первой попытки угадают)
-        print(f"Вау. Это лучший результат, с первой попытки угадал. Мое число действительно было {cislo}")
-        #11111111111111
-
+def start(cislo_program, usercislo): #функция для старта игры и проверки первого введенного числа  
+    if usercislo == cislo_program: #вдруг с первой попытки угадают)
+        print(f"Вау. Это лучший результат, с первой попытки угадал. Мое число действительно было {cislo_program}!")
+        return
     while not is_valid(usercislo) : #пока пользователь не введет корректное число - запрашиваем опять число
         usercislo = int(input('Введите правильное число от 1 до 100: '))
+    return usercislo
 
 
-def is_valid(num): #функция для проверки числа (не больше ста и не меньше 0)
-    if num > 100:
+def is_valid(usercislo): #функция для проверки числа (не больше ста и не меньше 0)
+    if usercislo > 100:
         print('Число больше ста.')
         return False
-    elif num < 1:
+    elif usercislo < 1:
         print('Число меньше одного.')
+        return False
+    elif not usercislo.isdigit():
+        print('Это не число.')
         return False
     else:
         return True
   
 
-def check_num(usercislo): #сама функция через которую пользователь угадывает число
-    global count_for_game
-    global count_win
-    while usercislo != cislo:
+def check_num(usercislo, cislo_program, count_for_game, count_win): #сама функция через которую пользователь угадывает число
+    while usercislo != cislo_program:
         count_for_game -= 1
-        if usercislo > cislo:
+        if usercislo > cislo_program:
             print('-----------------------------------------')
             print(f'Твое число больше чем мое, осталось {count_for_game} попыток.')
-        elif usercislo < cislo:
+        elif usercislo < cislo_program:
             print('-----------------------------------------')
             print(f'Твое число меньше чем мое, осталось {count_for_game} попыток.')
         if count_for_game == 0:
@@ -40,6 +40,8 @@ def check_num(usercislo): #сама функция через которую п�
             return
         print('-----------------------------------------')
         usercislo = int(input('Введите новое число от 1 до 100: '))
+        while not is_valid(usercislo) : #пока пользователь не введет корректное число - запрашиваем опять число
+            usercislo = int(input('Введите правильное число от 1 до 100: '))
         count_win += 1
     
     sleep(1)
@@ -52,17 +54,12 @@ def check_num(usercislo): #сама функция через которую п�
         
 
 def new_game_with_100():
-    global cislo
-    global count_for_game
-    global count_win
-    global usercislo
-
-    cislo = randint(1,100)
+    cislo_program = randint(1,100)
     usercislo = int(input('Отгадай число от 1 до 100: '))
     count_for_game = 10
     count_win = 1
-    start()
-    check_num(usercislo)
+    usercislo = start(cislo_program, usercislo)
+    check_num(usercislo, cislo_program, count_for_game, count_win)
 
 
 
