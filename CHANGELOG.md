@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.1.0 (2025-11-19)
+
+### Chores
+
+- Save work
+  ([`9e1a2b6`](https://github.com/nnnpppxxx/guess_number/commit/9e1a2b6094890da77fea8256d1dd592c8a15e6ad))
+
+### Features
+
+- Add new game with range user(test)
+  ([`6d627c0`](https://github.com/nnnpppxxx/guess_number/commit/6d627c078512d89a6bd8f041cf8d9f758cae543f))
+
+
 ## v1.0.1 (2025-11-18)
 
 ### Bug Fixes
