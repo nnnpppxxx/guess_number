@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.0-rc.2 (2025-11-19)
+
+### Features
+
+- Test
+  ([`ebe02a8`](https://github.com/nnnpppxxx/guess_number/commit/ebe02a8451eb2b0c57c57d9650a97a395db026ea))
+
+
 ## v1.2.0-rc.1 (2025-11-19)
 
 ### Features
