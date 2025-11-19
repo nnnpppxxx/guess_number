@@ -1,5 +1,5 @@
 # Guess the Number 🎯
-![version] version v1.1.0
+version v1.2.0
 
 
 A simple **Python console game** where the player tries to guess a randomly generated number within a given range.  
