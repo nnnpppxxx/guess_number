@@ -6,4 +6,5 @@ description = "pygame"
 [tool.semantic_release]
 
 version_toml = ["pyproject.toml:project.version"]
+version_pattern = ['README.md:version v{version}']
 commit_parser = "conventional"
