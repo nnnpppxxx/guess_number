@@ -1,16 +1,20 @@
 [project]
 name = "Guess The Number"
-version = "1.1.0"         
+version = "1.2.0-rc.1"
 description = "pygame"
 
 [tool.semantic_release]
-branches = [
-    "master",
-    "release/*"
-]
-
-
-
 version_toml = ["pyproject.toml:project.version"]
-version_pattern = ['README.md:version v{version}']
+version_variables = ["README.md:version v{version}:tf"]
 commit_parser = "conventional"
+
+
+[tool.semantic_release.branches.main]
+match = "master"
+prerelease = false
+
+
+[tool.semantic_release.branches.release]
+match = "release/.*"
+prerelease = true
+prerelease_token = "rc"

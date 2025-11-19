@@ -64,6 +64,7 @@ def new_game_with_100():
 
 
 
+
 def new_game_with_rangeuser(): #test
     cislo_program1 = 1
     cislo_program2 = int(input('Введите максимальное число для диапазона от 1 до ...: '))
@@ -72,6 +73,8 @@ def new_game_with_rangeuser(): #test
     usercislo = input(f'Отгадай мое новое загаданное число от 1 до {cislo_program2}: ')
     usercislo = start(cislo_program2, usercislo)
     pass
+
+
 
 
 
