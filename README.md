@@ -1,5 +1,5 @@
 # Guess the Number 🎯
-![version](https://img.shields.io/github/v/tag/nnnpppxxx/guess_number?label=version&sort=semver)
+![version] version v1.1.0
 
 
 A simple **Python console game** where the player tries to guess a randomly generated number within a given range.  
