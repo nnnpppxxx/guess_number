@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v1.2.0-rc.1 (2025-11-19)
+
+### Features
+
+- Add test version
+  ([`f6a729e`](https://github.com/nnnpppxxx/guess_number/commit/f6a729e0738784e32b841055955e52506fb3ff0a))
+
+- Test
+  ([`923afd9`](https://github.com/nnnpppxxx/guess_number/commit/923afd9fc34e901b67938f06375309b938f7a552))
+
+- Test
+  ([`2d17e66`](https://github.com/nnnpppxxx/guess_number/commit/2d17e666e002d16d5fab5f84dab3f21a83fa56f6))
+
+
 ## v1.1.0 (2025-11-19)
 
 ### Chores
