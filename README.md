@@ -1,5 +1,7 @@
 # Guess the Number 🎯
-version v1.2.0
+![Version](https://img.shields.io/badge/version-v1.1.0-blue)
+![Python](https://img.shields.io/badge/python-3.11+-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 
 A simple **Python console game** where the player tries to guess a randomly generated number within a given range.  
