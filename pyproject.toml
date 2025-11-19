@@ -4,6 +4,12 @@ version = "1.1.0"
 description = "pygame"
 
 [tool.semantic_release]
+branches = [
+    "master",
+    "release/*"
+]
+
+
 
 version_toml = ["pyproject.toml:project.version"]
 version_pattern = ['README.md:version v{version}']
